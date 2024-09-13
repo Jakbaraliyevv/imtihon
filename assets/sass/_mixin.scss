@@ -1,0 +1,80 @@
+@mixin more() {
+  font-family: $font__pt--sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $firts__text--color;
+  transition: 0.3s;
+  position: relative;
+  padding-bottom: 1px;
+  &::before {
+    content: "";
+    width: 20%;
+    bottom: -5px;
+    height: 3px;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s transform;
+    background-color: $border__bottom--color;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+@mixin flex--first() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex--second($gap) {
+  gap: $gap;
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex--grid($n, $m, $gap) {
+  gap: $gap;
+  display: grid;
+  grid-template-columns: repeat($n, $m);
+}
+
+@mixin first__text() {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  color: $firts__text--color;
+  font-family: $font__pt--sans;
+}
+
+@mixin first__text2($size, $lh) {
+  font-size: $size;
+  line-height: $lh;
+}
+
+@mixin second__text() {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: $font__pt--sans;
+  color: $firts__text--color;
+}
+
+@mixin second__text2($size, $lh) {
+  font-size: $size;
+  line-height: $lh;
+}
+
+@mixin third__text() {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $second__text--color;
+}
+
+@mixin third__text2($size, $lh) {
+  font-size: $size;
+  line-height: $lh;
+}

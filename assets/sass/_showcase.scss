@@ -1,0 +1,83 @@
+.showcase > div {
+  @include flex--first;
+}
+
+.showcase__left h1 {
+  font-size: 52px;
+  max-width: 610px;
+  font-weight: 600;
+  line-height: 65px;
+  padding-bottom: 35px;
+  color: $firts__text--color;
+  font-family: $font__pt--sans;
+}
+
+.showcase__left p {
+  max-width: 525px;
+  padding-bottom: 40px;
+  @include third__text;
+}
+
+.showcase__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $firts__text--color;
+}
+
+.showcase__link::before {
+  height: 3px;
+  background-color: $border__bottom--color;
+}
+
+@media (max-width: 1180px) {
+  .showcase__left h1 {
+    font-size: 34px;
+    line-height: 45px;
+  }
+  .showcase__left p {
+    @include third__text2(12px, 18px);
+  }
+}
+
+@media (max-width: 822px) {
+  .showcase > div {
+    @include flex--grid(1, 1fr, 40px);
+  }
+  .showcase__left {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .showcase__left h1 {
+    max-width: none;
+  }
+  .showcase__left p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 490px) {
+  .showcase > div {
+    gap: 20px;
+  }
+  .showcase__left {
+    text-align: start;
+  }
+  .showcase__left h1 {
+    font-size: 27px;
+    line-height: 35px;
+    padding-bottom: 20px;
+  }
+  .showcase__left p {
+    padding-bottom: 20px;
+    @include third__text2(10px, 14px);
+  }
+
+  .showcase__link {
+    position: static;
+    align-self: self-start;
+  }
+}

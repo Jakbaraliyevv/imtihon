@@ -1,0 +1,107 @@
+.contact {
+  margin-top: 120px;
+}
+
+.contact__top h2 {
+  @include first__text;
+}
+.contact__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.contact__bottom__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  background-color: #f9f9fb;
+  padding: 40px;
+}
+
+.bottom__right--card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-bottom: 1px solid #d7d7dd;
+  padding-bottom: 5px;
+}
+
+.birnima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.bottom__left--card {
+  @include flex--second(15px);
+}
+.card__phone i {
+  color: #0b7572;
+  font-size: 22px;
+}
+
+.card__text {
+  p {
+    font-family: $font__pt--sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-bottom: 10px;
+    color: $second__text--color;
+  }
+  a {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $firts__text--color;
+  }
+}
+
+.right__card1 p {
+  font-family: $font__pt--sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $second__text--color;
+}
+
+.right__card2 p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $firts__text--color;
+}
+
+@media (max-width: 903px) {
+  .contact {
+    margin-top: 80px;
+  }
+
+  .contact__bottom {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
+  .birnima {
+    align-items: start;
+  }
+  .contact__top h2 {
+    @include first__text2(38px, 45px);
+  }
+}
+
+@media (max-width: 506px) {
+    .birnima{
+        gap: 30px;
+    }
+  .bottom__right--card {
+    flex-direction: column;
+    align-items: start;
+  }
+  .contact__top h2 {
+    @include first__text2(28px, 35px);
+  }
+}

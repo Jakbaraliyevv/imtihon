@@ -1,0 +1,59 @@
+.pochemu {
+  margin-top: 70px;
+}
+
+.pochemu__right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 60px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.pochemu__right--text {
+  display: none;
+}
+.pochemu__right--border {
+  max-width: 447px;
+  @include flex--second(20px);
+}
+
+.border--bottom h3 {
+  @include second__text;
+  padding-bottom: 5px;
+}
+
+.border--bottom p {
+  @include third__text;
+}
+
+@media (max-width: 880px) {
+  .pochemu__right {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 440px) {
+  .img__pochemu {
+    display: none;
+  }
+
+  .pochemu__right--text {
+    display: block;
+  }
+  .pochemu__right {
+    padding-left: 0;
+  }
+
+  .border--bottom h3 {
+    @include second__text2(16px, 20px);
+    padding-bottom: 5px;
+  }
+
+  .border--bottom p {
+    @include third__text2(12px, 18px);
+  }
+}
